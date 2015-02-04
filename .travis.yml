@@ -1,0 +1,18 @@
+language:
+    - objective-c
+
+env:
+    matrix:
+        - python=2.7 CONDA_PY=27 CONDA_NPY=17
+
+    global:
+        - secure: "ka3e1z10JZe2oFFkoRW+QR7JNvKWvzObnjHvssrFpixIhLs240LnAwQT4AotqRAYy9/INaoUaegzNkjhVa5g40E103aGy4NkFXYHVjPS4kcuiqRajqD3NaH7xuJdSB8NvCk3ov6H2MAp6whm9Jfscp+GqzgwNEJGMaZ3yk+v2Qg="
+
+install: 
+    - source install.sh
+script:
+    - conda build --quiet conda-recipe
+
+after_success:
+    - cp /Users/travis/miniconda/conda-bld/osx-64/*.tar.bz2 .
+    - binstar -t $BINSTAR_TOKEN upload --force *.tar.bz2
