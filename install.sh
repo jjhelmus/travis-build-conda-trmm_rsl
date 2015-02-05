@@ -9,4 +9,4 @@ conda update --yes conda
 conda install --yes conda-build jinja2 binstar
 
 # remove Homebrew libjpeg or else librsl links against it.
-rm /usr/local/lib/libjpeg.8.dylib
+brew uninstall jpeg --force
