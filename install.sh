@@ -6,7 +6,7 @@ bash $MINICONDA_FILE -b
 export PATH=/Users/travis/miniconda/bin:$PATH
 
 conda update --yes conda
-conda install --yes conda-build jinja2 binstar
+conda install --yes conda-build jinja2 conda-server
 
 # remove Homebrew libjpeg or else librsl links against it.
 brew uninstall jpeg --force

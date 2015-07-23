@@ -15,4 +15,4 @@ script:
 
 after_success:
     - cp /Users/travis/miniconda/conda-bld/osx-64/*.tar.bz2 .
-    - binstar -t $BINSTAR_TOKEN upload --force *.tar.bz2
+    - conda server -t $BINSTAR_TOKEN upload --force *.tar.bz2
