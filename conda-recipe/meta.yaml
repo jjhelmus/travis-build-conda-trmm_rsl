@@ -1,10 +1,10 @@
 package:
     name: trmm_rsl
-    version: 1.48
+    version: 1.49
 
 source:
-    fn: rsl.v1.48.tar.gz
-    url: ftp://trmm-fc.gsfc.nasa.gov/software/rsl-v1.48.tar.gz
+    fn: rsl.v1.49.tar.gz
+    url: ftp://trmm-fc.gsfc.nasa.gov/software/rsl-v1.49.tar.gz
 
 build:
     number: 0
